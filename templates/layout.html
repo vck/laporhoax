@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>laporhoax.org</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="bootstrap.css")}}">
+	<script type="text/javascript" src="{{url_for("static", filename="bootstrap.min.js")}}"></script>
+<style type="text/css">
+
+
+</style>
+</head>
+	<nav class="nav navbar-default">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target="navbar" aria-expanded="false" aria-control="navbar" >
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div id="navbar" class="nav navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="/">find hoax</a></li>
+				<li><a href="/hoax">latest hoax</a></li>
+				<li><a href="/hoax/top">top hoax</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/create">submit</a></li>
+				<li><a href="/login">masuk</a></li>
+				<li><a href="#">tentang</a></li>
+			</ul>
+
+			<div class="navbar-form">
+		<form style="padding-left: 5%" class="form-inline" action="/cari" method="post">
+			<div class="form-group">
+				<input  class="form-control" placeholder="" type="text" style="width:auto; height: 50px; width: 600px; ;" required="true" name="text"></input>
+				<button type="submit" class="btn wrapper" style="height: 50px;">cari</button>	
+				</div>
+		</form>	
+		</div>
+	</div>
+	</nav>
+
+	{% block body %}
+	{% endblock %}
+</html>

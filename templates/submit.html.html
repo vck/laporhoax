@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>laporhoax.org</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="bootstrap.css)"}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="static.css")}}">
+	<script type="text/javascript" src="{{url_for("static",filename="bootstrap.min.js")}}"></script>
+</head>
+
+<body>
+	<nav class="nav navbar-default">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target="navbar" aria-expanded="false" aria-control="navbar" >
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div id="navbar" class="nav navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#">latest hoax</a></li>
+				<li><a href="#">top hoax</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">submit</a></li>
+				<li><a href="#">masuk</a></li>
+				<li><a href="#">tentang</a></li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container" style="padding-top: 2%;">
+	
+		<div class="container">
+		<p>masukkan informasi mengenai sumber berita yang diduga HOAX</p>
+	<div class="container-post">
+		<form  role="form" method="post", action="/create">
+			<div class="form-group">
+				<label for="url_alamat">url/sumber berita/alamat web</label>
+				<input class="form-control" name="url" type="text" placeholder="url/alamat sumber berita"></input>
+			</div>
+
+			<div class="form-group">
+				<label for="url_alamat">judul artikel/berita/kiriman</label>
+				<input class="form-control" name="judul" type="text" placeholder="url/alamat sumber berita"></input>
+			</div>
+
+			<button class="btn" type="submit">Submit</button>
+		</form>	
+	</div>
+		
+	</div>
+	
+	</div>
+	
+<footer class="footer">
+	<div class="container-footer">
+			
+	</div>
+</footer>
+
+</body>
+
+
+</html>

@@ -1,0 +1,59 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 80px;
+  background-color: #0000;
+}
+
+.nav{
+  background-color: #0000;
+
+}
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container-footer {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+.container-footer .text-muted {
+  margin: 20px 0;
+}
+
+  .container{
+    margin: auto;
+    margin-left: auto;
+  }
+
+  .center-block{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-center{
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .up{
+    margin-top: auto;
+    padding-top: 10%;
+  }
+
+  .footer > .container {
+      padding-right: 15px;
+      padding-left: 15px;
+  }
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>laporhoax.org</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="bootstrap.css")}}">
+	<script type="text/javascript" src="{{url_for("static", filename="bootstrap.min.js")}}"></script>
+	<script type="text/javascript" src="{{url_for("static", filename="jquery.min.js")}}"></script>
+<style type="text/css">
+.wrapper {
+    border:1px solid #000;
+    display:inline-block
+;    position:relative;
+}
+
+input,
+button {
+    background-color:transparent;
+    border:0;
+}
+
+button {
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+input {
+    padding-right:30px; /* button padding */
+}
+
+</style>
+
+</head>
+
+<body>
+	
+	<nav class="nav navbar-default">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target="navbar" aria-expanded="false" aria-control="navbar" >
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div id="navbar" class="nav navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/create">submit</a></li>
+				<li><a href="/masuk">masuk</a></li>
+				<li><a href="/tentang">tentang</a></li>
+			</ul>
+				<div class="navbar-form">
+					<form style="padding-left: 5%" class="form-inline" action="/cari" method="post">
+					<div class="form-group">
+						<input  class="form-control" placeholder="" type="text" style="width:auto; height: 50px; width: 600px; ;" required="true" name="text"></input>
+						<button type="submit" class="btn wrapper" style="height: 50px;">cari</button>	
+					</div>
+					</form>	
+				</div>
+		</div>
+	</nav>
+
+<div class="container">
+
+
+{%for hoax in data%}
+
+<div class="container-post">
+	<div class="row" style="padding-top: 1%;">
+		<h3><a href="hoax/{{hoax.id}}">{{hoax.title}}</a></h3>		
+		<p>hoax score: <span class="label label-danger">{{hoax.hoax_score}}</span></h4>
+		<p><a href="{{hoax.url}}">{{hoax.url}}</a></p>
+		<p>dikirim oleh: <a href="#">manusia.biasa</a></p>	
+		<p>{{hoax.pub_date}}</p>
+	</div>	
+</div>
+
+{%endfor%}
+
+</div>
+	
+
+
+</hr>
+</hr<>
+</div>
+</div>
+</body>
+</html>
