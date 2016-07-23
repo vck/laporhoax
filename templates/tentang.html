@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>laporhoax.org</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="bootstrap.css")}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="static.css")}}">
+	<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
+	<script type="text/javascript" src="{{url_for("static", filename="bootstrap.min.js")}}"></script>
+</head>
+
+<style type="text/css">
+	.wrapper {
+    border:1px solid #000;
+    display:inline-block;
+    position:relative;
+}
+
+input,
+button {
+    background-color:transparent;
+    border:0;
+}
+
+button {
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+input {
+    padding-right:30px; /* button padding */
+}
+</style>
+<body>
+	<nav class="nav navbar-default">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target="navbar" aria-expanded="false" aria-control="navbar" >
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+		</div>
+
+		<div id="navbar" class="nav navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="/">find hoax</a></li>
+				<li><a href="/hoax">latest hoax</a></li>
+				<li><a href="/hoax/top">top hoax</a></li>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="/create">submit</a></li>
+				<li><a href="/login">masuk</a></li>
+				<li><a href="/about">tentang</a></li>
+			</ul>
+
+
+		</div>
+	</nav>
+	<div class="container">
+		<div class="container-fluid">
+			<h3 class="bold">tentang</h3>
+			<h4><code>laporhoax.org</code> adalah bentuk kepedulian terhadap kondisi akhir-akhir ini dimana banyak media yang tidak bertanggung jawab terhadap konten berita yang mereka buat. sehingga hal ini menimbulkan ambiguity di kalangan masyarakat awam yang kurang melakukan <i>research</i> terhadap konten berita tersebut </h4>
+		</div>
+
+		<div class="container-fluid">
+			<h3>bagaimana</h3>
+			<h4><code>laporhoax.org</code> mengumpulkan URL <code>Uniform Resource Locator</code> dari konten berita yang diduga <i>HOAX</i> yang dimasukkan oleh pengguna, selanjutnya, setiap link akan diberi <i>score hoax</i>. </h4>
+		</div>
+	
+		<div class="container-fluid">
+			<h3>score hoax</h3>
+			<h4>adalah tolak ukur yang menentukan apakah suatu konten berita tergolong HOAX atau BUKAN HOAX</h4>
+			<h4>teknik scoring terhadap URL dari konten berita</h4>
+			<ul>
+				<li><h4>hoax score = 0 <code>BELUM DAPAT DIPASTIKAN APAKAH HOAX ATAU BUKAN</code></h4></li>
+				<li><h4>hoax score > 0 <code>CENDERUNG HOAX</code></h4></li>
+				<li><h4>hoax score < 0 <code>CENDERUNG BENAR</code></h4></li>
+			</ul>
+		</div>
+
+		<div class="container-fluid">
+			<h3>pengembang</h3>
+			<h4><code>laporhoax.org</code> dikembangkan oleh <a href="http://twitter.com/vickydasta">Vicky Vernando Dasta</a></h4>
+			<h4>ingin membantu pengembangan? silahkan sapa pengembang</h4>
+		</div>
+	</div>
+
+
+
+<footer class="footer">
+	<div class="container-footer">
+				
+	</div>
+</footer>
+
+</body>
+
+
+</html>
+
+
+<footer class="footer">
+	<div class="container-footer">
+				
+	</div>
+</footer>
+
+</body>
+
+
+</html>
