@@ -68,7 +68,6 @@ input {
 			<ul class="nav navbar-nav">
 				<li><a href="/">find hoax</a></li>
 				<li><a href="/hoax">latest hoax</a></li>
-				<li><a href="/hoax/top">top hoax</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/create">submit</a></li>
@@ -85,16 +84,11 @@ input {
 		<div class="col-md-8">
 			<h3><a href="/hoax/{{hoax.id}}">{{hoax.title}}</a></h3>		
 		</div>
-		<div class="col-md-4"><h4 style="width: 30; padding-top: 10%">views: <span class="label label-info">500</span></h4></div>
 	</div>	
 
 	<div class="row">
 		<div class="col-md-4">
 			<p><a href="{{hoax.url}}">{{hoax.url}}</a></p>
-		</div>
-		
-		<div class="col-md-4">
-			<p>dikirim oleh: <a href="#">manusia.biasa</a></p>	
 		</div>
 		
 		<div class="col-md-4">

@@ -101,7 +101,7 @@ def login():
         flash('username is invalid', 'error')
         return redirect(url_for('login'))
     if not registered_user.check_password(password):
-        flash('password is invalid', 'error')
+        flash('password is invalid',' error')
         return redirect(url_for('login'))
     login_user(registered_user)
     flash('berhasil login')
@@ -171,6 +171,10 @@ def view_by_domain():
 def logout():
     logout_user()
     return redirect(url_for("hoax_index"))
+
+@app.route('/about')
+def about():
+    return render_template('tentang.html')
 
 @login_manager.user_loader
 def load_user(id):
