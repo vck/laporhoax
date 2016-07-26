@@ -6,27 +6,7 @@
 	<script type="text/javascript" src="{{url_for("static", filename="bootstrap.min.js")}}"></script>
 	<script type="text/javascript" src="{{url_for("static", filename="jquery.min.js")}}"></script>
 <style type="text/css">
-.wrapper {
-    border:1px solid #000;
-    display:inline-block
-;    position:relative;
-}
 
-input,
-button {
-    background-color:transparent;
-    border:0;
-}
-
-button {
-    position:absolute;
-    right:0;
-    top:0;
-}
-
-input {
-    padding-right:30px; /* button padding */
-}
 
 </style>
 
@@ -62,26 +42,32 @@ input {
 
 <div class="container">
 
+{% if not data %}
+
+<p>no post available</p>
+<p>why not create <a href="/submit">one</a></p>
+
+{% else %}
 
 {%for hoax in data%}
-
 <div class="container-post">
 	<div class="row" style="padding-top: 1%;">
 		<h3><a href="hoax/{{hoax.id}}">{{hoax.title}}</a></h3>		
-		<p>hoax score: <span class="label label-danger">{{hoax.hoax_score}}</span></h4>
+		<p>score:<span class="label label-danger">{{hoax.hoax_score}}</span></h4>
 		<p><a href="{{hoax.url}}">{{hoax.url}}</a></p>
 		<p>{{hoax.pub_date}}</p>
 	</div>	
 </div>
-
 {%endfor%}
 
+{%endif%}
 </div>
+
+
 	
 
 
 </hr>
-</hr<>
 </div>
 </div>
 </body>

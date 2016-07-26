@@ -11,15 +11,11 @@ from flask.ext.login import LoginManager
 from flask.ext.login import login_user , logout_user , current_user , login_required
 from flask import Flask,session, request, flash, url_for, redirect, render_template, abort,g
 
-
-app = Flask(__name__)
+app = Flask("laporhoax")
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ['DATABASE_URL']
 app.secret_key = "managaassQW"
 
 db = SQLAlchemy(app)
-
-regex = "^((http[s]?|ftp):\/)?\/?([^:\/\s]+)"
-reg = re.compile(regex)
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -77,9 +73,6 @@ class Hoax(db.Model):
         self.pub_date = datetime.utcnow()
         self.domain = find_domain_name(url)
         self.hoax_score = 0
-
-def find_domain_name(url):
-    return reg.findall(url)[0][2]
 
 @app.route('/register', methods=['GET', 'POST'])    
 def register():
