@@ -1,4 +1,4 @@
 db.sqlte
-.pyc
+*.pyc
 db123.sqlite
 db.sqlite
