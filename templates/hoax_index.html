@@ -25,15 +25,15 @@
 		</div>
 		<div id="navbar" class="nav navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/create">submit</a></li>
-				<li><a href="/masuk">masuk</a></li>
-				<li><a href="/tentang">tentang</a></li>
+				<li><a href="/create">Submit</a></li>
+				<li><a href="/masuk">Masuk</a></li>
+				<li><a href="/tentang">Tentangss</a></li>
 			</ul>
 				<div class="navbar-form">
 					<form style="padding-left: 5%" class="form-inline" action="/cari" method="post">
 					<div class="form-group">
 						<input  class="form-control" placeholder="" type="text" style="width:auto; height: 50px; width: 600px; ;" required="true" name="text"></input>
-						<button type="submit" class="btn wrapper" style="height: 50px;">cari</button>	
+						<button type="submit" class="btn wrapper" style="height: 50px;">Cari</button>	
 					</div>
 					</form>	
 				</div>
@@ -44,8 +44,8 @@
 
 {% if not data %}
 
-<p>no post available</p>
-<p>why not create <a href="/submit">one</a></p>
+<p>No Post Available :(</p>
+<p>Why not create <a href="/submit">one</a>?</p>
 
 {% else %}
 
@@ -53,7 +53,7 @@
 <div class="container-post">
 	<div class="row" style="padding-top: 1%;">
 		<h3><a href="hoax/{{hoax.id}}">{{hoax.title}}</a></h3>		
-		<p>score:<span class="label label-danger">{{hoax.hoax_score}}</span></h4>
+		<p>Score: <span class="label label-danger">{{hoax.hoax_score}}</span></h4>
 		<p><a href="{{hoax.url}}">{{hoax.url}}</a></p>
 		<p>{{hoax.pub_date}}</p>
 	</div>	

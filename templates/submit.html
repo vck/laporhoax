@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>laporhoax.org</title>
+	<title>Lapor Hoax</title>
 	<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="bootstrap.css")}}">
 	<link rel="stylesheet" type="text/css" href="{{url_for("static", filename="static.css")}}">
 	<script type="text/javascript" src="{{url_for("static",filename="bootstrap.min.js")}}"></script>
@@ -241,14 +241,15 @@
 		</div>
 		<div id="navbar" class="nav navbar-collapse bold">
 			<ul class="nav navbar-nav">
-				<li><a href="#">latest hoax</a></li>
-				<li><a href="#">top hoax</a></li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right bold">
-				<li><a class="#" href="#">submit</a></li>
-				<li><a href="#">masuk</a></li>
-				<li><a href="#">tentang</a></li>
-			</ul>
+        <li><a href="/">Find Hoax</a></li>
+        <li><a href="/hoax">Latest Hoax</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/create">Submit</a></li>
+        <li><a href="/login">Masuk</a></li>
+        <li><a href="/about">Tentang</a></li>
+      </ul>
 		</div>
 	</nav>
 
@@ -260,7 +261,7 @@
             <div class="panel-heading">
               <div class="row">
                 <div class="">
-                  <a href="#" class="active">submit hoax</a>
+                  <a href="#" class="active">Submit Hoax</a>
                 </div>
               </div>
             </div>
