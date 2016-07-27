@@ -12,3 +12,7 @@ $ git clone https://github.com/vickydasta/laporhoax.git
 $ cd laporhoax
 $ python apps.py
 ```
+
+## Contributor
+* Vicky Vernando Dasta
+* Andre Christoga
